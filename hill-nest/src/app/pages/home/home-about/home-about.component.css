@@ -1,0 +1,14 @@
+.image-holder-parent{
+    background: url('../../../../assets/img/hillnest.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+@media only screen and (max-width:600px){
+    .home-about-heading2, .home-about-heading2 span{
+        font-size: 30px;
+    }
+    .home-about-headings3{
+        font-size: 18px;
+    }
+}

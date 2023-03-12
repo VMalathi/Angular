@@ -1,0 +1,68 @@
+<section class="contact-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <app-heading headingText1="Get in" headingText2="Touch"></app-heading>
+                <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()">
+                    <p><label> Your Name (required)</label></p>
+                    <input [ngClass]="{'is-invalid':submitted && enquiryForm.controls['name']}" formControlName="name" type="text" class="form-control">
+                    <div *ngIf="submitted && enquiryForm.controls['name']" class="text-danger">
+                        <div *ngIf="submitted && enquiryForm.controls['name'].errors?.['required']">
+                          First Name is required
+                        </div>
+                        <div *ngIf="submitted && enquiryForm.controls['name'].errors?.['minlength']">
+                          First Name Should be atleast 4 characters
+                        </div>  
+                    </div>
+                       
+                    <p><label> Your Email (required)</label></p>
+                    <input [ngClass]="{'is-invalid':submitted && enquiryForm.controls['email'].errors}" formControlName="email" type="email" class="form-control">
+                    <div *ngIf="submitted && enquiryForm.controls['email'].errors" class="text-danger">
+                      <div *ngIf="submitted && enquiryForm.controls['email'].errors?.['required']">
+                        Email Address is required
+                      </div>
+                      <div *ngIf="submitted && enquiryForm.controls['email'].errors?.['email']">
+                        Email Address is not Valid
+                      </div>
+                    </div>
+                    
+                    <p><label> Subject</label></p>
+                        <input size="40" class="form-control" type="text" name="your-subject">
+                    
+                    <p><label> Your Message</label></p>
+                        <textarea cols="40" rows="10" class="form-control" name="your-message"></textarea> 
+                    <p>
+                        <app-button buttonName="Submit" buttonSize="M" buttonShade="D"></app-button>
+                    </p>
+                </form>
+            </div>
+            <div class="col-md-6 p-3">
+                <div class="p-5">
+                    <app-heading headingText3="Contact Info"></app-heading>
+                    <p>Have any Queries? Let us know. We will clear it for you at the best.</p>
+                    <div class="d-flex mb-3">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div>
+                            <h5>Location</h5>
+                            <p>Lourde Peter Hill Nest<br> Kotagiri, The Nilgiris, Tamil Nadu, India</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div>
+                            <h5>Email</h5>
+                            <p>info@hillnest.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <i class="bi bi-phone-fill"></i>
+                        <div>
+                            <h5>Phone</h5>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

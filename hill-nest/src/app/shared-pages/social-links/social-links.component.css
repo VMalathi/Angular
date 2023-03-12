@@ -1,0 +1,7 @@
+.social-links i{
+    color:var(--primary-color);
+    padding:0px 10px;
+}
+.mobile-links i{
+    color:var(--secondary-color);
+}

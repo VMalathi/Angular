@@ -1,0 +1,24 @@
+.nav-menu a{
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    color:#fff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.fixed-ul a{
+    color:var(--secondary-color);
+}
+.mobileNav-menu a{
+    color: var(--secondary-color);
+}
+.active-link{
+    color: var(--primary-color) !important;
+}
+@media (max-width:768px){
+    .nav-menu{
+        margin:auto;
+    }
+    .nav-menu a{
+        color:var(--secondary-color);
+    }
+}
