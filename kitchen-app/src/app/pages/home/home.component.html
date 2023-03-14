@@ -1,0 +1,50 @@
+<section class="banner">
+    <div class="content">
+        <h1 class="mb-5">Fresh Cooked Food<br> At Your Door.</h1>
+        <a routerLink="menu">ORDER NOW<i class="bi bi-arrow-right"></i></a>
+    </div>
+</section>
+
+<section class="steps">
+    <div class="container">
+        <h2 class="text-center mb-4">How to Get <span class="special-heading">Fresh Food</span></h2>
+        <div class="row mt-5">
+            <div class="col-md-4 mt-2">
+                <div class="stepBox">
+                    <h3>1</h3>
+                    <p>Select Food</p>
+                </div>
+            </div>
+            <div class="col-md-4 mt-2">
+                <div class="stepBox">
+                    <h3>2</h3>
+                    <p>Fill the Details</p>
+                </div>
+            </div>
+            <div class="col-md-4 mt-2">
+                <div class="stepBox">
+                    <h3>3</h3>
+                    <p>Your order delivered in minute</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="food-details">
+    <div class="container">
+        <h2 class="text-center mb-4">Customers <span class="special-heading">Favourites Food</span></h2>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let fd of foodData;index as i">
+                <div class="foodbox" *ngIf="i<=3">
+                    <img src="{{fd.foodImg}}" class="img-fluid">
+                    <h4>{{fd.foodName}}</h4>
+                    <p>{{fd.foodPrice | currency : 'INR'}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a routerLink="menu" class="viewmore text-center mx-auto">View more<i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+</section>

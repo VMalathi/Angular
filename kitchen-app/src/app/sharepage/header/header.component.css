@@ -1,0 +1,14 @@
+header{
+    background:var(--primary-color);
+}
+header .navbar-brand{
+    color:var(--secondary-color);
+    font-weight: bold;
+}
+.navbar-nav li a{
+    color:#fff;
+}
+.navbar-expand-lg .navbar-nav .nav-link.active-link{
+    font-weight:bold;
+    color:var(--secondary-color);
+}

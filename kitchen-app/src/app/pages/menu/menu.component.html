@@ -1,0 +1,16 @@
+<section class="food-details">
+    <div class="container">
+        <h2 class="text-center mb-4">Customers <span class="special-heading">Favourites Food</span></h2>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let fd of foodData;index as i">
+                <div class="foodbox">
+                    <img src="{{fd.foodImg}}" class="img-fluid">
+                    <h4>{{fd.foodName}}</h4>
+                    <p>{{fd.foodDetails}}</p>
+                    <p>{{fd.foodPrice | currency : 'INR'}}</p>
+                    <a [routerLink]="['/menu',fd.id]" class="viewmore">Buy Now <i class="bi bi-bag"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

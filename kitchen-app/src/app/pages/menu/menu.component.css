@@ -1,0 +1,27 @@
+.special-heading{
+    color:var(--primary-color);
+}
+.food-details{
+    padding:50px 0px;
+}
+
+.foodbox{
+    padding:10px 5px;
+}
+.foodbox img{
+    width:100%;
+    height: 250px;
+    object-fit: cover;
+}
+.foodbox h4{
+    font-size: 16px;
+    margin-top:20px;
+    font-weight: bold;
+}
+.food-details .viewmore{
+    background:var(--secondary-color);
+    color:#fff;
+    padding:10px 15px;
+    width:max-content;
+    text-decoration: none;
+}
