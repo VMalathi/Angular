@@ -1,0 +1,12 @@
+.box{
+    padding: 10px;
+    box-shadow: 0px 0 25px 0 rgb(0 0 0 / 10%);
+    background-color: rgba(248, 248, 248, 1);
+}
+.box h5{
+    font-size: 18px;
+}
+.box img{
+    height: 250px;
+    object-fit: cover;
+}

@@ -1,0 +1,6 @@
+header{
+    background: var(--primary-color);
+}
+.nav-link{
+    color: var(--secondary-color);
+}
